@@ -1,2 +1,11 @@
+# CPP Binaries
 *.bin
 a.out
+
+# Latex Files that are not .pdf and .tex
+*.aux
+*.toc
+*.fls
+*.gz
+*.log
+*.fdb_latexmk

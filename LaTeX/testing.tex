@@ -1,0 +1,111 @@
+\documentclass[12pt]{report}
+
+% NEEDED FOR CASES
+\usepackage{amsmath}
+
+% DOCUMENT SET UP
+\title{Title of The Document}
+\author{Carson Holland}
+\date{\today}
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+% Chapter 1 --------------------------------------
+\chapter{Table}
+\label{chapter:table}
+
+This is the chapter table. I a writing more info here.
+
+\section{Section One}
+\label{section:one}
+This is the first section in Chapter~\ref{chapter:table}. This is Section~\ref{section:one}
+
+\subsection{Subsection 1}
+We are talking about something specific within Chapter~\ref{chapter:table}
+
+
+% TABLE
+\begin{table}[h!]
+\begin{tabular}{| l | l | l |} \hline
+Time (ms) & Meters  & Color  \\ \hline
+5.5 ms  & 8meters  & Pink  \\ \hline
+6.7 ms & 17 meters & Green \\ \hline
+\end{tabular}
+\caption{A sample table with ms, meters, and color}
+\label{table:my_data}
+\end{table}
+
+% Referencing the table later
+As shown in Table~\ref{table:my_data}, the values reflect nothing. This data makes no sense.
+
+
+% Chapter 2 --------------------------------------
+\chapter{Math Equations}
+\label{chapter:math_equations}
+
+\section{My Used Math Equations}
+
+\begin{enumerate}
+    \label{enumerate:equations}
+    % Energy Equation
+    \item 
+        \begin{equation}
+        E = mc^2
+        \label{equation:energy}
+        \end{equation}
+    
+    % Fake Sin Equation
+    \item
+        \begin{equation}
+        E = sin(2\pi * 10 + t)
+        \label{equation:fake_sin}
+        \end{equation}
+
+    % Fourier Transform Equation
+    \item
+        \begin{equation}
+            H(s) = \int_{0}^{\infty} x(t) * e^{-2\pi j \omega} \,d\omega
+        \label{equation:f_transform}
+        \end{equation}
+\end{enumerate}
+We have a lot of cool stuff in Equation List~\ref{enumerate:equations}. In Equation~\ref{equation:fake_sin} reveals nothing, as this document is just a LaTeX learning tool. That equation is giberish
+
+% Chapter 3 --------------------------------------
+\chapter{Items}
+\label{chapter:bracket_items}
+
+\section{Brakcet Items Section}
+\label{section:b_items}
+
+
+\[
+f(x) = 
+\begin{cases}
+\label{cases:complex_function}
+x & \text{if } x \ge 0 \\
+x^3 & \text{if } x < 0 \\
+nothing & \text{if } \pi = \infty \\
+\end{cases}
+\]
+As shown in Equation~\ref{cases:complex_function}, that is a piecewise function.
+
+\[
+\left[
+Sum Algorithm
+\begin{array}{l}
+\label{array:sum_algorithm} \\
+    \text{1. Add up all numbers} \\
+    \text{2. Divide the sum from step 1 by the number of items added.} \\
+    \text{3. Profit.} \\
+    \text{4. Bottom Text} \\
+\end{array}
+\right]
+\]
+
+
+
+
+
+\end{document}
