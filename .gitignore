@@ -1,5 +1,6 @@
 # CPP Binaries
 *.bin
+*.exere
 a.out
 
 # Latex Files that are not .pdf and .tex
